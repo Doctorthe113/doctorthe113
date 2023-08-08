@@ -1,0 +1,138 @@
+.moon-in--forest-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #000000;
+}
+.moon-in--forest-container1 {
+  width: 100%;
+  height: 966px;
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+  background-size: cover;
+  justify-content: flex-start;
+  background-image: url('https://cdn.discordapp.com/attachments/1050372907748036659/1138078541448216716/image.png');
+  background-position: center;
+}
+.moon-in--forest-text {
+  top: 64px;
+  left: 0px;
+  color: #273abd;
+  right: 0px;
+  margin: auto;
+  opacity: 0.5;
+  position: absolute;
+  font-size: 50px;
+  font-style: normal;
+  text-align: center;
+  font-family: Times New Roman;
+  font-weight: 700;
+}
+.moon-in--forest-text1 {
+  top: 284px;
+  left: 24px;
+  color: #07d67e;
+  position: absolute;
+  font-style: normal;
+  font-family: Times New Roman;
+  font-weight: 700;
+  border-color: #07d67e;
+  text-decoration: none;
+}
+.moon-in--forest-div {
+  left: 0px;
+  bottom: 0px;
+  position: absolute;
+  border-color: var(--dl-color-gray-black);
+  border-width: 0px;
+}
+.moon-in--forest-textinput {
+  left: 0px;
+  right: 0px;
+  width: 380px;
+  bottom: 97px;
+  height: 64px;
+  margin: auto;
+  position: absolute;
+  align-self: center;
+  box-shadow: 5px 5px 10px 0px rgba(255, 142, 0, 0.79);
+  text-align: left;
+  border-color: #ff8e00;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
+}
+@media(max-width: 991px) {
+  .moon-in--forest-container1 {
+    width: 100%;
+    height: 954px;
+  }
+  .moon-in--forest-text {
+    opacity: 0.5;
+  }
+  .moon-in--forest-text1 {
+    color: #07d67e;
+    font-style: normal;
+    font-family: Times New Roman;
+    font-weight: 700;
+    border-color: #07d67e;
+    text-decoration: none;
+  }
+  .moon-in--forest-textinput {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+@media(max-width: 767px) {
+  .moon-in--forest-container1 {
+    width: 100%;
+    height: 944px;
+  }
+  .moon-in--forest-text {
+    color: #273abd;
+    opacity: 0.5;
+    font-size: 50px;
+    font-style: normal;
+    text-align: center;
+    font-family: Times New Roman;
+    font-weight: 700;
+  }
+  .moon-in--forest-textinput {
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    width: 318px;
+    bottom: 56px;
+    height: 43px;
+    margin: auto;
+    opacity: 0.6;
+    position: absolute;
+    font-size: 20px;
+    box-shadow: 5px 5px 20px 0px rgba(255, 142, 0, 0.49);
+    text-align: center;
+    font-family: Times New Roman;
+    border-color: #ff8e00;
+    border-style: solid;
+    border-radius: 10px;
+    padding-bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+@media(max-width: 479px) {
+  .moon-in--forest-container1 {
+    width: 100%;
+    height: 893px;
+    background-position: top;
+  }
+  .moon-in--forest-textinput {
+    left: 0px;
+    right: 0px;
+    bottom: 32px;
+    margin: auto;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
