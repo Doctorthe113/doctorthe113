@@ -1,0 +1,64 @@
+html, body{
+    background-color: black;
+    background: url(assets/homepage/my-websites-background.svg) fixed no-repeat;
+    background-size: 1920px 1080px;
+    background-position-x: 50%;
+}
+
+#firstHeader{
+    background-color: rgba(34, 55, 100, 0.75);
+    color: aliceblue;
+    margin-top: 5%;
+    margin: 0 auto;
+    width: 400px;
+    height: 240px;
+    text-align: center;
+    box-shadow: 8px 8px 9px 1px rgb(44, 95, 146);
+}
+
+#buttons{
+    background-color: rgb(44, 95, 146);
+    width: 51px;
+    position: fixed;
+    top:2%;
+    right: 10px;
+    bottom: auto;
+}
+
+#portfolioButton, #githubButton, #contactsButton{
+
+    margin: 1%;
+    width: 50px;
+    height: 50px;
+    padding: 0%;
+}
+
+a{
+    color: inherit;
+}
+
+#snippets{
+    margin-top: 8%;
+}
+
+#firstSnippet, #secondSnippet{
+    background-color: rgba(10, 9, 49, 0.75);
+    width: 40%;
+    padding-left: 1%;
+    padding-right: 1%;
+    color:antiquewhite;
+    box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
+    text-align:left;
+}
+
+#firstSnippet{
+    margin-left: 5%;
+}
+#secondSnippet{
+    margin-left: 55%;
+}
+
+.snippetsImage{
+    margin-left: 85%;
+}
+
