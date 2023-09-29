@@ -22,13 +22,19 @@ a{
     box-shadow: 8px 8px 9px 1px rgb(44, 95, 146);
 }
 
-#buttons{
+#selections{
     background-color: rgba(10, 9, 49, 0.4);
-    width: 169px;
+    width: 231px;
     position: fixed;
     top:2%;
     right: 10px;
     bottom: auto;
+}
+
+#pageSelection{
+    color: antiquewhite;
+    text-align: center;
+    box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
 }
 
 .buttons{
@@ -54,6 +60,11 @@ a{
     background-size: contain;
     background-color: rgba(0, 0, 0, 0);
 }
+#freeCodeCampButton{
+    background-image: url(assets/homepage/radio.svg);
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+}
 
 #snippets{
     background-color: rgba(10, 9, 49, 0.4);
@@ -65,7 +76,6 @@ a{
 #firstSnippetHeader{
     margin-top: 0%;
 }
-
 #firstSnippet, #secondSnippet, #thirdSnippet{
     background-color: rgba(10, 9, 49, 0.7);
     width: 40%;
@@ -98,11 +108,20 @@ a{
     width: 128px;
     height: 128px;
 }
-#thirdSnippetImage{
+#thirdSnippetsImage{
     margin-left: 126.5%;
     margin-top: -100%;
     width: 128px;
     height: 171px;
+}
+
+#ytPlayer{
+    margin: 0 auto;
+    width: 50%;
+}
+#youtubeHeader{
+    color: antiquewhite;
+    margin-top: 100px;
 }
 
 #game{
@@ -111,4 +130,20 @@ a{
 }
 #gameHeader{
     color: antiquewhite;
+}
+
+@media screen and (max-width: 900px), screen and (orientation: portrait){
+    .buttons{
+        display: none;
+    }
+    #firstSnippet, #secondSnippet, #thirdSnippet{
+        margin: 0 auto;
+        width: 50%;
+    }
+    #firstSnippetsImage, #secondSnippetsImage, #thirdSnippetsImage{
+        display: none;
+    }
+    #selections{
+        width: auto;
+    }
 }
