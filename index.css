@@ -86,16 +86,20 @@ a{
 #firstSnippetsImage{
     margin-left: 126.5%;
     margin-top: -100%;
-    width: 25%;
-    height: 25%;
+    width: 128px;
+    height: 128px;
 }
 #secondSnippetsImage{
     margin-left: -71.5%;
     margin-top: -100%;
-    width: 25%;
-    height: 25%;
+    width: 128px;
+    height: 128px;
 }
 
+#game{
+    margin: 0 auto;
+    width: 50%;
+}
 #gameHeader{
     color: antiquewhite;
 }
