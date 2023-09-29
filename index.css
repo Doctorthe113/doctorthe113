@@ -117,7 +117,8 @@ a{
 
 #ytPlayer{
     margin: 0 auto;
-    width: 50%;
+    width: 560px;
+    height: 315px;
 }
 #youtubeHeader{
     color: antiquewhite;
@@ -126,7 +127,8 @@ a{
 
 #game{
     margin: 0 auto;
-    width: 50%;
+    width: 600px;
+    height: 400px;
 }
 #gameHeader{
     color: antiquewhite;
@@ -150,5 +152,10 @@ a{
     }
     #selections{
         width: auto;
+    }
+    #ytPlayer, #game{
+        width: auto;
+        height: auto;
+        aspect-ratio: 16/9;
     }
 }
