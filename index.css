@@ -1,8 +1,14 @@
 html, body{
     background-color: black;
     background: url(assets/homepage/my-websites-background.svg) fixed no-repeat;
-    background-size: 1920px 1080px;
+    background-size: cover;
     background-position-x: 50%;
+    margin: 0%;
+    padding: 0%;
+}
+
+a{
+    color: inherit;
 }
 
 #firstHeader{
@@ -17,32 +23,51 @@ html, body{
 }
 
 #buttons{
-    background-color: rgb(44, 95, 146);
-    width: 51px;
+    background-color: rgba(10, 9, 49, 0.4);
+    width: 169px;
     position: fixed;
     top:2%;
     right: 10px;
     bottom: auto;
 }
 
-#portfolioButton, #githubButton, #contactsButton{
-
+.buttons{
     margin: 1%;
     width: 50px;
     height: 50px;
     padding: 0%;
+    border: 0px;
+    box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
 }
-
-a{
-    color: inherit;
+#portfolioButton{
+    background-image: url(assets/homepage/portfolio.svg);
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+}
+#githubButton{
+    background-image: url(assets/homepage/github-mark.svg);
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+}
+#contactsButton{
+    background-image: url(assets/homepage/contacts.svg);
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #snippets{
+    background-color: rgba(10, 9, 49, 0.4);
     margin-top: 8%;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
+}
+#firstSnippetHeader{
+    margin-top: 0%;
 }
 
 #firstSnippet, #secondSnippet{
-    background-color: rgba(10, 9, 49, 0.75);
+    background-color: rgba(10, 9, 49, 0.7);
     width: 40%;
     padding-left: 1%;
     padding-right: 1%;
@@ -55,10 +80,22 @@ a{
     margin-left: 5%;
 }
 #secondSnippet{
-    margin-left: 55%;
+    margin-left: 53%;
 }
 
-.snippetsImage{
-    margin-left: 85%;
+#firstSnippetsImage{
+    margin-left: 126.5%;
+    margin-top: -100%;
+    width: 25%;
+    height: 25%;
+}
+#secondSnippetsImage{
+    margin-left: -71.5%;
+    margin-top: -100%;
+    width: 25%;
+    height: 25%;
 }
 
+#gameHeader{
+    color: antiquewhite;
+}
