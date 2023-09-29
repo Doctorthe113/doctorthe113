@@ -133,6 +133,11 @@ a{
 }
 
 @media screen and (max-width: 900px), screen and (orientation: portrait){
+    #firstHeader{
+        margin-left: 0%;
+        margin-right: 0%;
+        width: 100%;
+    }
     .buttons{
         display: none;
     }
