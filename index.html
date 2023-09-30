@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -26,13 +27,13 @@ language to use is Python.
         <a href="https://github.com/Doctorthe113"><button class="buttons" id="githubButton"></button></a>
         <a href="other-pages\art-portfolio.html"><button class="buttons" id="portfolioButton"></button></a>
         <a href="other-pages\contacts.html"><button class="buttons" id="contactsButton"></button></a>
-        <form id="pageSelection">
-            <select name="page">
+        <form>
+            <select name="page" id="pageSelection" onChange="window.location.href=this.value">
                 <option value="selectMe">Other Page</option>
-                <option value="github">Github</option>
-                <option value="portfolio">Art Portfolio</option>
-                <option value="blog">Blog</option>
-                <option value="contacts">Contacts</option>
+                <option value="https://github.com/Doctorthe113">Github</option>
+                <option value="other-pages\art-portfolio.html">Art Portfolio</option>
+                <option value="other-pages\blog-menu.html">Blog</option>
+                <option value="other-pages\contacts.html">Contacts</option>
             </select>
         </form>
     </div>
