@@ -1,0 +1,8 @@
+html, body{
+    background-color: black;
+    background: url(../assets/homepage/my-websites-background.svg) fixed no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    margin: 0%;
+    padding: 0%;
+}
