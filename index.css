@@ -1,3 +1,7 @@
+/* bg-color, bg, color, margin, width, height, padding, position, top right left bottom, align, box, box shadow */
+
+
+
 html, body{
     background-color: black;
     background: url(assets/homepage/my-websites-background.svg) fixed no-repeat;
@@ -27,14 +31,19 @@ a{
     width: 231px;
     position: fixed;
     top:2%;
-    right: 10px;
+    left: 10px;
     bottom: auto;
 }
 
 #pageSelection{
+    background-color: rgba(0, 0, 0, 0.0);
     color: antiquewhite;
+    width: 100%;
     text-align: center;
     box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
+}
+.pageSelectionOptions{
+    background-color: rgba(10, 9, 49, 0.4);
 }
 
 .buttons{
@@ -46,24 +55,24 @@ a{
     box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
 }
 #portfolioButton{
+    background-color: rgba(0, 0, 0, 0);
     background-image: url(assets/homepage/portfolio.svg);
     background-size: contain;
-    background-color: rgba(0, 0, 0, 0);
 }
 #githubButton{
+    background-color: rgba(0, 0, 0, 0);
     background-image: url(assets/homepage/github-mark.svg);
     background-size: contain;
-    background-color: rgba(0, 0, 0, 0);
 }
 #contactsButton{
+    background-color: rgba(0, 0, 0, 0);
     background-image: url(assets/homepage/contacts.svg);
     background-size: contain;
-    background-color: rgba(0, 0, 0, 0);
 }
 #freeCodeCampButton{
+    background-color: rgba(0, 0, 0, 0);
     background-image: url(assets/homepage/radio.svg);
     background-size: contain;
-    background-color: rgba(0, 0, 0, 0);
 }
 
 #snippets{
@@ -78,12 +87,13 @@ a{
 }
 #firstSnippet, #secondSnippet, #thirdSnippet{
     background-color: rgba(10, 9, 49, 0.7);
+    color:antiquewhite;
     width: 40%;
     padding-left: 1%;
     padding-right: 1%;
-    color:antiquewhite;
-    box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
     text-align:left;
+    box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
+    font-size: 20px;
 }
 
 #firstSnippet{
@@ -97,20 +107,20 @@ a{
 }
 
 #firstSnippetsImage{
-    margin-left: 126.5%;
     margin-top: -100%;
+    margin-left: 126.5%;
     width: 128px;
     height: 128px;
 }
 #secondSnippetsImage{
-    margin-left: -71.5%;
     margin-top: -100%;
+    margin-left: -71.5%;
     width: 128px;
     height: 128px;
 }
 #thirdSnippetsImage{
-    margin-left: 126.5%;
     margin-top: -100%;
+    margin-left: 126.5%;
     width: 128px;
     height: 171px;
 }
@@ -145,7 +155,8 @@ a{
     }
     #firstSnippet, #secondSnippet, #thirdSnippet{
         margin: 0 auto;
-        width: 50%;
+        width: 90%;
+        box-shadow: 0px 4px 9px 1px rgb(44, 95, 146);
     }
     #firstSnippetsImage, #secondSnippetsImage, #thirdSnippetsImage{
         display: none;
