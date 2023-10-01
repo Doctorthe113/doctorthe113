@@ -29,7 +29,7 @@ a{
     background-size: contain;
     background-color: rgba(0, 0, 0, 0);
 }
-#header{
+#topHeader{
     margin-left: 25%;
     margin-top: -40px;
     width: 50%;
@@ -37,10 +37,19 @@ a{
     text-align: center;
 }
 #blogs{
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 8%;
+    margin-right: 8%;
     margin-top: 40px;
     margin-bottom: 40px;
     color: antiquewhite;
     font-size: 25px;
+}
+
+@media screen and (max-width: 900px), screen and (orientation: portrait){
+    #secondHeader{
+        font-size: 30px;
+    }
+    #blogs{
+        font-size: 20px;
+    }
 }

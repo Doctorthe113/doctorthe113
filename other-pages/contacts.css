@@ -6,3 +6,55 @@ html, body{
     margin: 0%;
     padding: 0%;
 }
+
+a{
+    color: inherit;
+}
+
+#topOfTheScreen{
+    margin-top: 0%;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(34, 55, 100, 0.4);
+    box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
+}
+#homepage{
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 0%;
+    border: 0px;
+    box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
+    background-image: url(../assets/other-pages/home-icon-silhouette.svg);
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+}
+#topHeader{
+    margin-left: 25%;
+    margin-top: -40px;
+    width: 50%;
+    color: aliceblue;
+    text-align: center;
+}
+
+#contacts{
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: antiquewhite;
+    font-size: 25px;
+}
+
+.usernames{
+    color: aquamarine;
+}
+
+@media screen and (max-width: 900px), screen and (orientation: portrait){
+    #secondHeader{
+        font-size: 30px;
+    }
+    #contacts{
+        font-size: 20px;
+    }
+}
