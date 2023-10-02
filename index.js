@@ -4,3 +4,17 @@ function goToNewPAge(){
         window.location = url;
     }
 }
+
+function playRadio(){
+    let radio = document.getElementById("freeCodeCampRadio");
+    let indicator = document.getElementById("radioPlayerIndicator");
+    if (radio.paused){
+        radio.play();
+        indicator.style.display = "block";
+    }
+    else{
+        radio.pause();
+        indicator.style.display = "none";
+    }
+}
+

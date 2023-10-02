@@ -75,6 +75,10 @@ a{
     background-size: contain;
 }
 
+#radioPlayerIndicator{
+    display: none;
+}
+
 #snippets{
     background-color: rgba(10, 9, 49, 0.4);
     margin-top: 8%;
