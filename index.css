@@ -86,47 +86,65 @@ a{
     padding-bottom: 0.75%;
     box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
 }
-#firstSnippetHeader{
-    margin-top: 0%;
-}
-#firstSnippet, #secondSnippet, #thirdSnippet{
+
+#firstSnippetText, #secondSnippetText, #thirdSnippetText{
     background-color: rgba(10, 9, 49, 0.7);
     color:antiquewhite;
-    width: 40%;
+    width: 50%;
     padding-left: 1%;
     padding-right: 1%;
     text-align:left;
     box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
     font-size: 20px;
 }
+#firstSnippetHeader{
+    margin-top: 0%;
+}
 
 #firstSnippet{
-    margin-left: 5%;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 95%;
+    display: flex;
 }
 #secondSnippet{
-    margin-left: 53%;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 95%;
+    display: flex;
 }
 #thirdSnippet{
-    margin-left: 5%;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 95%;
+    display: flex;
 }
 
+#firstSnippetText{
+    width: 50%;
+}
 #firstSnippetsImage{
-    margin-top: -100%;
-    margin-left: 126.5%;
-    width: 128px;
-    height: 128px;
+    width: 50%;
+}
+
+#secondSnippetsText{
+    width: 50%;
 }
 #secondSnippetsImage{
-    margin-top: -100%;
-    margin-left: -71.5%;
-    width: 128px;
-    height: 128px;
+    width: 50%;
+}
+
+#thirdSnippetsText{
+    width: 50%;
 }
 #thirdSnippetsImage{
-    margin-top: -100%;
-    margin-left: 126.5%;
-    width: 128px;
-    height: 171px;
+    width: 50%;
 }
 
 #ytPlayer{
@@ -161,6 +179,9 @@ a{
         margin: 0 auto;
         width: 90%;
         box-shadow: 0px 4px 9px 1px rgb(44, 95, 146);
+    }
+    #firstSnippetText, #secondSnippetText, #thirdSnippetText{
+        width: 100%;
     }
     #firstSnippetsImage, #secondSnippetsImage, #thirdSnippetsImage{
         display: none;

@@ -17,4 +17,3 @@ function playRadio(){
         indicator.style.display = "none";
     }
 }
-
