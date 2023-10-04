@@ -15,21 +15,17 @@ a{
     color: inherit;
 }
 
-#firstHeader{
-    background-color: rgba(34, 55, 100, 0.75);
-    color: aliceblue;
-    margin-top: 5%;
-    margin: 0 auto;
-    width: 400px;
-    height: 240px;
-    text-align: center;
-    box-shadow: 8px 8px 9px 1px rgb(44, 95, 146);
+#topOfTheScreen{
+    margin-top: 0%;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(34, 55, 100, 0.4);
+    box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
 }
 
 #selections{
     background-color: rgba(10, 9, 49, 0.4);
     width: 231px;
-    position: fixed;
     top:2%;
     left: 10px;
     bottom: auto;
@@ -77,6 +73,25 @@ a{
 
 #radioPlayerIndicator{
     display: none;
+}
+
+#topHeader{
+    margin-left: 25%;
+    margin-top: -40px;
+    width: 50%;
+    color: aliceblue;
+    text-align: center;
+}
+
+#firstHeader{
+    background-color: rgba(34, 55, 100, 0.75);
+    color: aliceblue;
+    margin-top: 5%;
+    margin: 0 auto;
+    width: 400px;
+    height: 240px;
+    text-align: center;
+    box-shadow: 8px 8px 9px 1px rgb(44, 95, 146);
 }
 
 #snippets{
@@ -131,6 +146,8 @@ a{
 }
 #firstSnippetsImage{
     width: 50%;
+    display: grid;
+    place-items: center;
 }
 
 #secondSnippetsText{
@@ -138,6 +155,8 @@ a{
 }
 #secondSnippetsImage{
     width: 50%;
+    display: grid;
+    place-items: center;
 }
 
 #thirdSnippetsText{
@@ -145,6 +164,8 @@ a{
 }
 #thirdSnippetsImage{
     width: 50%;
+    display: grid;
+    place-items: center;
 }
 
 #ytPlayer{
@@ -172,9 +193,6 @@ a{
         margin-right: 0%;
         width: 100%;
     }
-    .buttons{
-        display: none;
-    }
     #firstSnippet, #secondSnippet, #thirdSnippet{
         margin: 0 auto;
         width: 90%;
@@ -185,9 +203,6 @@ a{
     }
     #firstSnippetsImage, #secondSnippetsImage, #thirdSnippetsImage{
         display: none;
-    }
-    #selections{
-        width: auto;
     }
     #ytPlayer, #game{
         width: auto;

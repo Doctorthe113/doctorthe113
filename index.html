@@ -12,6 +12,26 @@
 </head>
 
 <body>
+    <div id="topOfTheScreen">
+        <div id = "selections">
+            <button class="buttons" id="freeCodeCampButton" onclick="playRadio()"></button>
+            <a href="https://github.com/Doctorthe113"><button class="buttons" id="githubButton"></button></a>
+            <a href="other-pages\art-portfolio.html"><button class="buttons" id="portfolioButton"></button></a>
+            <a href="other-pages\contacts.html"><button class="buttons" id="contactsButton"></button></a>
+            <form>
+                <select name="page" id="pageSelection" onclick="goToNewPAge()">
+                    <option class="pageSelectionOptions" value="" disabled selected>Other Page</option>
+                    <option class="pageSelectionOptions" value="https://github.com/Doctorthe113">Github</option>
+                    <option class="pageSelectionOptions" value="other-pages\art-portfolio.html">Art Portfolio</option>
+                    <option class="pageSelectionOptions" value="other-pages\blog-menu.html">Blog</option>
+                    <option class="pageSelectionOptions" value="other-pages\contacts.html">Contacts</option>
+                </select>
+            </form>
+            <label id="radioPlayerIndicator">🔴freeCodeCampRadio's playing</label>
+        </div>
+        <h1 id="topHeader"><u>Home</u></h1>
+    </div>
+
     <div id="firstHeader">
         <h1 class="center">Hello there!</h1>
         <h2 class="center"><u>Welcome to my site 👀</u></h2>
@@ -30,23 +50,6 @@
     type="audio/mp3">
     </audio>
 
-    <div id = "selections">
-        <button class="buttons" id="freeCodeCampButton" onclick="playRadio()"></button>
-        <a href="https://github.com/Doctorthe113"><button class="buttons" id="githubButton"></button></a>
-        <a href="other-pages\art-portfolio.html"><button class="buttons" id="portfolioButton"></button></a>
-        <a href="other-pages\contacts.html"><button class="buttons" id="contactsButton"></button></a>
-        <form>
-            <select name="page" id="pageSelection" onclick="goToNewPAge()">
-                <option class="pageSelectionOptions" value="" disabled selected>Other Page</option>
-                <option class="pageSelectionOptions" value="https://github.com/Doctorthe113">Github</option>
-                <option class="pageSelectionOptions" value="other-pages\art-portfolio.html">Art Portfolio</option>
-                <option class="pageSelectionOptions" value="other-pages\blog-menu.html">Blog</option>
-                <option class="pageSelectionOptions" value="other-pages\contacts.html">Contacts</option>
-            </select>
-        </form>
-        <label id="radioPlayerIndicator">🔴freeCodeCampRadio's playing</label>
-    </div>
-
     <div id="snippets">
         <div id="firstSnippet">
             <div id="firstSnippetText">
@@ -61,19 +64,18 @@
                 </p>
             </div>
             <div id="firstSnippetsImage">
-                <img src="assets/homepage/code.webp" style="
-                    display: block; margin: auto; width: 70%; 
-                    max-width: 440px; max-height: 258px;">
+                <img src="assets/homepage/first-snippet.webp" style="
+                    width: 70%; max-width: 440px; max-height: 258px;">
             </div>
         </div>
 
         <div id="secondSnippet">
             <div id="secondSnippetsImage">
-                <img src="assets\homepage\second-snippet.svg" style="
-                    display: block; margin: auto; width: 50%; max-height: 232px;">
+                <img src="assets/homepage/second-snippet.webp" style="
+                    width: 90%; max-width: 621px; max-height: 203px;">
             </div>
             <div id="secondSnippetText">
-                <a href="other-pages\art-portfolio.html"><h3><u>Graphic projects</u></h3></a>
+                <a href="other-pages/art-portfolio.html"><h3><u>Graphic projects</u></h3></a>
                 <p>I was always fascinated by the world 
                     of digital art. While I did start 
                     my journey with Autodesk Sketchbook, 
@@ -102,8 +104,7 @@
                 </p>
             </div>
             <div id="thirdSnippetsImage">
-                <img src="assets\homepage\Painting by M.webp" style="
-                    display: block; margin: auto; margin-top: 3%; margin-bottom: 3%; 
+                <img src="assets/homepage/third-snippet.webp" style="
                     width: 80%; max-width: 225px; max-height: 250px;">
             </div>
         </div>
@@ -122,8 +123,8 @@
     <div id="gamePart">
         <h3 id="gameHeader">If you are bored, wanna try this game from <a href="https://codepen.io/gregh/pen/yVLOyO">Codepen.io?</a></h3>
         <div id="game">
-            <!--<iframe src="https://codepen.io/gregh/embed/yVLOyO?default-tab=result&theme-id=dark" loading="lazy" width="100%" height="100%" scrolling="no" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-            -->
+            <iframe height="300" style="width: 100%;" scrolling="no" title="Pure CSS Tic-tac-toe" src="https://codepen.io/ziga-miklic/embed/QWrGyW?default-tab=result&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            </iframe>
         </div>
     </div>
 
