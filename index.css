@@ -1,11 +1,11 @@
-/* bg-color, bg, color, margin, width, height, padding, position, top right left bottom, align, box, box shadow */
+/* bg-color, bg, color, margin, padding, width, height, position, top right left bottom, align, box, box shadow */
 
 
 
-html, body{
+body{
     background-color: black;
     background: url(assets/homepage/my-websites-background.svg) fixed no-repeat;
-    background-size: cover;
+    background-size:cover;
     background-position-x: 50%;
     margin: 0%;
     padding: 0%;
@@ -16,25 +16,27 @@ a{
 }
 
 #topOfTheScreen{
+    background-color: rgba(34, 55, 100, 0.4);
     margin-top: 0%;
     width: 100%;
-    height: 100px;
-    background-color: rgba(34, 55, 100, 0.4);
+    height: fit-content;
     box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
+    /* display: flex; */
 }
 
 #selections{
     background-color: rgba(10, 9, 49, 0.4);
-    width: fit-content;
+    width: 238px;
     top:2%;
     left: 10px;
     bottom: auto;
+
 }
 
 #pageSelection{
     background-color: rgba(0, 0, 0, 0.0);
     color: antiquewhite;
-    width: 231px;
+    width: 100%;
     text-align: center;
     box-shadow: 3px 3px 9px 1px rgb(44, 95, 146);
 }
@@ -78,6 +80,7 @@ a{
 #topHeader{
     margin-left: 25%;
     margin-top: -40px;
+    margin-bottom: -40px;
     width: 50%;
     color: aliceblue;
     text-align: center;
@@ -86,8 +89,8 @@ a{
 #firstHeader{
     background-color: rgba(34, 55, 100, 0.75);
     color: aliceblue;
-    margin-top: 5%;
-    margin: 0 auto;
+    margin-top: 50px;
+    margin-left: 40%;
     width: 400px;
     height: 240px;
     text-align: center;
