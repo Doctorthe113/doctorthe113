@@ -14,8 +14,8 @@ I like to program in my free time for fun. I like the joy it gives upon completi
 ![Linux](https://img.shields.io/badge/Docker-blue?style=for-the-badge&logo=docker&logoColor=white)
 
 ### **Completed projects:**
-- [inkFlowio](https://github.com/Doctorthe113/inkflow)
-- [flexEmbed](https://github.com/Doctorthe113/flexembed)
+- [flexEmbed](https://flexembed.doctorthe113.com)
+- [inkFlowio](https://doctorthe113.github.io/inkflow) (first public SPA application)
 - [Athena](https://github.com/Doctorthe113/Athena-BOT)
 - [ASCII Media Maker](https://github.com/Doctorthe113/ascii-media-convertor)
 
