@@ -17,6 +17,7 @@ I like to program in my free time for fun. I like the joy it gives upon completi
 - [wavScribe](https://wavscribe.doctorthe113.com)
 - [flexEmbed](https://flexembed.doctorthe113.com)
 - [inkFlowio](https://doctorthe113.github.io/inkflow) (first public SPA application)
+- [Campfire](https://campfire.doctorthe113.com)
 - [Athena](https://github.com/Doctorthe113/Athena-BOT)
 - [ASCII Media Maker](https://github.com/Doctorthe113/ascii-media-convertor)
 
