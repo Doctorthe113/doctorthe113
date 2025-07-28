@@ -13,14 +13,14 @@ import { Shadcn } from "@/icons/shadcn";
 import { AstroLogo } from "@/icons/astro";
 import { Python } from "@/icons/python";
 import "../styles/global.css";
-
-const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
 ---
 
 <BaseLayout title="Home">
-    <div class="flex flex-col justify-start items-center h-svh w-svw p-2 gap-3">
+    <div
+        class="flex flex-col justify-start items-center h-full w-full p-2 gap-5 relative"
+    >
         <div
-            class="max-w-2xl w-full flex justify-between px-2 py-2 dark:bg-secondary rounded-base border-2 border-border shadow-shadow gap-2"
+            class="max-w-2xl w-full flex justify-between px-2 py-2 dark:bg-secondary bg-sidebar rounded-base border-2 border-border shadow-shadow gap-2 sticky top-2"
             id="header"
         >
             <Button
@@ -38,38 +38,31 @@ const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
         </div>
         <Card className="max-w-2xl w-full p-2 py-3" id="content">
             <div class="text-pretty">
-                Hello there, welcome to my site. I am a indie fullstack
-                developer. I use <a href="" class="text-primary">Nextjs</a>, <a
+                Hello there, welcome to my site. I am an indie fullstack
+                developer.
+                <br />
+                <br />
+                I do programming in my free time. I am currently working building
+                an open source, locally run AI mobile app using <a
                     href=""
-                    class="text-primary">Tailwindcss</a
-                >, <a href="" class="text-primary">Shadcn UI</a> for building full
-                stack web apps. I also used Python(<a
-                    href=""
-                    class="text-primary">FastAPI</a
-                >) and <a href="" class="text-primary">BunJS</a> to build backend
-                services. I also have experience with running local llm/AI models
-                and llm api such as OpenAI or Gemini.
+                    class="dark:text-primary text-destructive font-bold"
+                    >React Native</a
+                > and improving
+                <a href="" class="dark:text-primary text-destructive font-bold"
+                    >Lunarscribe</a
+                >. I am learning embedded C for raspberry pi pico, learning GO
+                and Rust for backend. I am also learning more and more about
+                NextJS and react everyday to build better web apps 🚀
                 <br />
                 <br />
-                I do programming in my free time. Some of my favorite projects are
-                Inkflow(my first react webapp), Lunarscribe(A note taking app) built
-                using Tauri, Cosmic(AI chat app).
-                <br />
-                <br />
-                I am currently working building an open source, locally run AI mobile
-                app using <a href="" class="text-primary">React Native</a> and improving
-                <a href="" class="text-primary">Lunarscribe</a>. I am learning
-                embedded C for raspberry pi pico, learning GO and Rust for
-                backend. I am also learning more and more about NextJS and react
-                everyday to build better web apps 🚀
             </div>
         </Card>
         <div class="max-w-2xl w-full flex flex-col justify-center gap-3">
             <span
                 class="text-xl text-center underline underline-offset-2 font-bold cursor-default"
-                >The Stack I use</span
+                >The Stack that I use</span
             >
-            <div class="flex gap-6 items-center justify-center">
+            <div class="flex gap-6 items-center justify-center flex-wrap">
                 <div
                     class="flex gap-6 border-1 border-foreground/50 rounded px-2 py-1 relative"
                     id="fullstack-stack"
@@ -80,12 +73,14 @@ const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
                     <div class="size-12 flex items-center">
                         <Shadcn />
                     </div>
-                    <div class="h-12 w-28 fill-white flex items-center">
+                    <div
+                        class="h-12 w-28 dark:fill-white fill-black flex items-center"
+                    >
                         <NextJS />
                     </div>
                     <label
                         for="fullstack-stack"
-                        class="absolute top-full left-0 text-center w-full text-sm text-muted-foreground"
+                        class="absolute top-full left-0 text-center w-full text-xs text-muted-foreground"
                         >Fullstack</label
                     >
                 </div>
@@ -96,12 +91,14 @@ const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
                     <div class="size-12 text-sky-400 flex items-center">
                         <React />
                     </div>
-                    <div class="size-12 flex items-center">
+                    <div
+                        class="size-12 dark:fill-white fill-black flex items-center"
+                    >
                         <AstroLogo />
                     </div>
                     <label
                         for="frontend-stack"
-                        class="absolute top-full left-0 text-center w-full text-sm text-muted-foreground"
+                        class="absolute top-full left-0 text-center w-full text-xs text-muted-foreground"
                         >Frontend or SPA</label
                     >
                 </div>
@@ -119,13 +116,75 @@ const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
                     </div>
                     <label
                         for="frontend-stack"
-                        class="absolute top-full left-0 text-center w-full text-sm text-muted-foreground wrap-break-word"
+                        class="absolute top-full left-0 text-center w-full text-xs text-muted-foreground wrap-break-word"
                         >Backend services</label
                     >
                 </div>
             </div>
         </div>
-        <div class="mt-auto mb-10 text-primary">
+        <Card className="max-w-2xl w-full p-2 py-3 mt-2">
+            <div class="text-pretty">
+                I use <a
+                    href=""
+                    class="dark:text-primary text-destructive font-bold"
+                    >Nextjs</a
+                >, <a
+                    href=""
+                    class="dark:text-primary text-destructive font-bold"
+                    >Tailwindcss</a
+                >, <a
+                    href=""
+                    class="dark:text-primary text-destructive font-bold"
+                    >Shadcn UI</a
+                > for building full stack web apps. <a
+                    href=""
+                    class="dark:text-primary text-destructive font-bold"
+                    >Prisma</a
+                > ORM for managing databases. I used Python(<a
+                    href=""
+                    class="dark:text-primary text-destructive font-bold"
+                    >FastAPI</a
+                >) and <a
+                    href=""
+                    class="dark:text-primary text-destructive font-bold"
+                    >BunJS</a
+                > to build backend services in the past. I also have experience with
+                running local llm/AI models and llm api such as OpenAI or Gemini.
+                <br />
+                <br />
+            </div>
+        </Card>
+        <Card className="max-w-2xl w-full p-2 py-3">
+            <div
+                class="text-pretty underline underline-offset-2 font-bold text-primary"
+            >
+                Some of my favorite projects are:
+            </div>
+            <div class="text-pretty">
+                <a href="" class="font-bold">Lunarscribe</a> a note taking desktop
+                software inspired by Obsidian. But unlike obsidian, it is built with
+                Tauri to reduce bundle/binary size and it has a very minimal UI.
+                Currently in beta.
+            </div>
+            <div class="text-pretty">
+                <a href="" class="font-bold">Cosmic(formerly Nocturne)</a> a AI chatapp
+                made for the t3 clonathon competition. This was my 2nd nextjs project.
+                I had a lot of fun and I learnt a lot!
+            </div>
+            <div class="text-pretty">
+                <a href="" class="font-bold">FlexEmbed</a> simple tool to make large
+                file sharing on Discord much easier. This directly embeds the file
+                without any hassle. This isn't meant to be a full fledged file sharing
+                service. Just a humble tool to make my life easier.
+            </div>
+            <div class="text-pretty">
+                <a href="" class="font-bold">Inkflow</a> inspired by Typelit, this
+                is a webapp where you can upload your favorite books and practice
+                typing. This was one of my very first react projects. So it's not
+                very polished. I intend to come back to this later sometime.
+            </div>
+        </Card>
+        <div class="mt-auto mb-10 dark:text-primary text-foreground">
             This site was built with <AstroLogo className="h-6 inline" /> and <Shadcn
                 className="h-6 inline"
             />

@@ -1,8 +1,6 @@
 export function React({ className }: { className?: string }) {
     return (
         <svg
-            width="100%"
-            height="100%"
             viewBox="-10.5 -9.45 21 18.9"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
