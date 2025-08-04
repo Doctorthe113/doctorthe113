@@ -5,7 +5,6 @@ import { Button } from "../components/ui/button";
 import { Github } from "lucide-react";
 import { Card } from "../components/ui/card";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Marquee from "@/components/ui/marquee";
 import { Tailwind } from "@/icons/tailwind";
 import { NextJS } from "@/icons/nextjs";
 import { React } from "@/icons/react";
@@ -17,18 +16,18 @@ import "../styles/global.css";
 
 <BaseLayout title="Home">
     <div
-        class="flex flex-col justify-start items-center h-full w-full p-2 gap-5 relative"
+        class="flex flex-col justify-start items-center h-full w-full p-2 gap-5 relative z-100"
     >
         <div
             class="max-w-2xl w-full flex justify-between px-2 py-2 dark:bg-secondary bg-sidebar rounded-base border-2 border-border shadow-shadow gap-2 sticky top-2"
             id="header"
         >
             <Button
-                className="h-8 hover:underline underline-offset-2"
+                className="h-8 hover:underline underline-offset-3"
                 variant={"noShadow"}>Blog</Button
             >
             <Button
-                className="h-8 hover:underline underline-offset-2"
+                className="h-8 hover:underline underline-offset-3"
                 variant={"noShadow"}>Projects</Button
             >
             <div class="flex gap-2 ml-auto text-primary">
@@ -43,12 +42,14 @@ import "../styles/global.css";
                 <br />
                 <br />
                 I do programming in my free time. I am currently working building
-                an open source, locally run AI mobile app using <a
-                    href=""
+                an open source, agentic, locally run AI mobile app using <a
+                    href="https://reactnative.dev/"
                     class="dark:text-primary text-destructive font-bold"
                     >React Native</a
                 > and improving
-                <a href="" class="dark:text-primary text-destructive font-bold"
+                <a
+                    href="https://github.com/Doctorthe113/lunarscribe-public"
+                    class="dark:text-primary text-destructive font-bold"
                     >Lunarscribe</a
                 >. I am learning embedded C for raspberry pi pico, learning GO
                 and Rust for backend. I am also learning more and more about
@@ -59,12 +60,12 @@ import "../styles/global.css";
         </Card>
         <div class="max-w-2xl w-full flex flex-col justify-center gap-3">
             <span
-                class="text-xl text-center underline underline-offset-2 font-bold cursor-default"
+                class="text-xl text-center underline underline-offset-3 font-bold cursor-default"
                 >The Stack that I use</span
             >
-            <div class="flex gap-6 items-center justify-center flex-wrap">
+            <div class="flex gap-6 items-center justify-center flex-wrap -z-10">
                 <div
-                    class="flex gap-6 border-1 border-foreground/50 rounded px-2 py-1 relative"
+                    class="flex gap-6 border-1 border-dashed border-foreground/50 rounded p-3 relative"
                     id="fullstack-stack"
                 >
                     <div class="size-12 fill-sky-400 flex items-center">
@@ -80,12 +81,12 @@ import "../styles/global.css";
                     </div>
                     <label
                         for="fullstack-stack"
-                        class="absolute top-full left-0 text-center w-full text-xs text-muted-foreground"
+                        class="absolute top-full py-1 left-0 text-center w-full text-xs text-muted-foreground"
                         >Fullstack</label
                     >
                 </div>
                 <div
-                    class="flex gap-6 border-1 border-foreground/50 rounded px-2 py-1 relative"
+                    class="flex gap-6 border-1 border-dashed border-foreground/50 rounded p-3 relative"
                     id="frontend-stack"
                 >
                     <div class="size-12 text-sky-400 flex items-center">
@@ -98,12 +99,12 @@ import "../styles/global.css";
                     </div>
                     <label
                         for="frontend-stack"
-                        class="absolute top-full left-0 text-center w-full text-xs text-muted-foreground"
+                        class="absolute top-full py-1 left-0 text-center w-full text-xs text-muted-foreground"
                         >Frontend or SPA</label
                     >
                 </div>
                 <div
-                    class="flex gap-6 border-1 border-foreground/50 rounded px-2 py-1 relative"
+                    class="flex gap-6 border-1 border-dashed border-foreground/50 rounded p-3 relative"
                     id="frontend-stack"
                 >
                     <div class="size-12 text-sky-400 flex items-center">
@@ -111,12 +112,16 @@ import "../styles/global.css";
                     </div>
                     <div class="size-12 flex items-center">
                         <img
+                            class="select-none"
+                            width="128"
+                            height="128"
+                            alt="python"
                             src="data:image/svg+xml;base64, PHN2ZyBpZD0iQnVuIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA3MCI+PHRpdGxlPkJ1biBMb2dvPC90aXRsZT48cGF0aCBpZD0iU2hhZG93IiBkPSJNNzEuMDksMjAuNzRjLS4xNi0uMTctLjMzLS4zNC0uNS0uNXMtLjMzLS4zNC0uNS0uNS0uMzMtLjM0LS41LS41LS4zMy0uMzQtLjUtLjUtLjMzLS4zNC0uNS0uNS0uMzMtLjM0LS41LS41LS4zMy0uMzQtLjUtLjVBMjYuNDYsMjYuNDYsMCwwLDEsNzUuNSwzNS43YzAsMTYuNTctMTYuODIsMzAuMDUtMzcuNSwzMC4wNS0xMS41OCwwLTIxLjk0LTQuMjMtMjguODMtMTAuODZsLjUuNS41LjUuNS41LjUuNS41LjUuNS41LjUuNUMxOS41NSw2NS4zLDMwLjE0LDY5Ljc1LDQyLDY5Ljc1YzIwLjY4LDAsMzcuNS0xMy40OCwzNy41LTMwQzc5LjUsMzIuNjksNzYuNDYsMjYsNzEuMDksMjAuNzRaIi8+PGcgaWQ9IkJvZHkiPjxwYXRoIGlkPSJCYWNrZ3JvdW5kIiBkPSJNNzMsMzUuN2MwLDE1LjIxLTE1LjY3LDI3LjU0LTM1LDI3LjU0UzMsNTAuOTEsMywzNS43QzMsMjYuMjcsOSwxNy45NCwxOC4yMiwxM1MzMy4xOCwzLDM4LDNzOC45NCw0LjEzLDE5Ljc4LDEwQzY3LDE3Ljk0LDczLDI2LjI3LDczLDM1LjdaIiBzdHlsZT0iZmlsbDojZmJmMGRmIi8+PHBhdGggaWQ9IkJvdHRvbV9TaGFkb3ciIGRhdGEtbmFtZT0iQm90dG9tIFNoYWRvdyIgZD0iTTczLDM1LjdhMjEuNjcsMjEuNjcsMCwwLDAtLjgtNS43OGMtMi43MywzMy4zLTQzLjM1LDM0LjktNTkuMzIsMjQuOTRBNDAsNDAsMCwwLDAsMzgsNjMuMjRDNTcuMyw2My4yNCw3Myw1MC44OSw3MywzNS43WiIgc3R5bGU9ImZpbGw6I2Y2ZGVjZSIvPjxwYXRoIGlkPSJMaWdodF9TaGluZSIgZGF0YS1uYW1lPSJMaWdodCBTaGluZSIgZD0iTTI0LjUzLDExLjE3QzI5LDguNDksMzQuOTQsMy40Niw0MC43OCwzLjQ1QTkuMjksOS4yOSwwLDAsMCwzOCwzYy0yLjQyLDAtNSwxLjI1LTguMjUsMy4xMy0xLjEzLjY2LTIuMywxLjM5LTMuNTQsMi4xNS0yLjMzLDEuNDQtNSwzLjA3LTgsNC43QzguNjksMTguMTMsMywyNi42MiwzLDM1LjdjMCwuNCwwLC44LDAsMS4xOUM5LjA2LDE1LjQ4LDIwLjA3LDEzLjg1LDI0LjUzLDExLjE3WiIgc3R5bGU9ImZpbGw6I2ZmZmVmYyIvPjxwYXRoIGlkPSJUb3AiIGQ9Ik0zNS4xMiw1LjUzQTE2LjQxLDE2LjQxLDAsMCwxLDI5LjQ5LDE4Yy0uMjguMjUtLjA2LjczLjMuNTksMy4zNy0xLjMxLDcuOTItNS4yMyw2LTEzLjE0QzM1LjcxLDUsMzUuMTIsNS4xMiwzNS4xMiw1LjUzWm0yLjI3LDBBMTYuMjQsMTYuMjQsMCwwLDEsMzksMTljLS4xMi4zNS4zMS42NS41NS4zNkM0MS43NCwxNi41Niw0My42NSwxMSwzNy45Myw1LDM3LjY0LDQuNzQsMzcuMTksNS4xNCwzNy4zOSw1LjQ5Wm0yLjc2LS4xN0ExNi40MiwxNi40MiwwLDAsMSw0NywxNy4xMmEuMzMuMzMsMCwwLDAsLjY1LjExYy45Mi0zLjQ5LjQtOS40NC03LjE3LTEyLjUzQzQwLjA4LDQuNTQsMzkuODIsNS4wOCw0MC4xNSw1LjMyWk0yMS42OSwxNS43NmExNi45NCwxNi45NCwwLDAsMCwxMC40Ny05Yy4xOC0uMzYuNzUtLjIyLjY2LjE4LTEuNzMsOC03LjUyLDkuNjctMTEuMTIsOS40NUMyMS4zMiwxNi40LDIxLjMzLDE1Ljg3LDIxLjY5LDE1Ljc2WiIgc3R5bGU9ImZpbGw6I2NjYmVhNztmaWxsLXJ1bGU6ZXZlbm9kZCIvPjxwYXRoIGlkPSJPdXRsaW5lIiBkPSJNMzgsNjUuNzVDMTcuMzIsNjUuNzUuNSw1Mi4yNy41LDM1LjdjMC0xMCw2LjE4LTE5LjMzLDE2LjUzLTI0LjkyLDMtMS42LDUuNTctMy4yMSw3Ljg2LTQuNjIsMS4yNi0uNzgsMi40NS0xLjUxLDMuNi0yLjE5QzMyLDEuODksMzUsLjUsMzgsLjVzNS42MiwxLjIsOC45LDMuMTRjMSwuNTcsMiwxLjE5LDMuMDcsMS44NywyLjQ5LDEuNTQsNS4zLDMuMjgsOSw1LjI3QzY5LjMyLDE2LjM3LDc1LjUsMjUuNjksNzUuNSwzNS43LDc1LjUsNTIuMjcsNTguNjgsNjUuNzUsMzgsNjUuNzVaTTM4LDNjLTIuNDIsMC01LDEuMjUtOC4yNSwzLjEzLTEuMTMuNjYtMi4zLDEuMzktMy41NCwyLjE1LTIuMzMsMS40NC01LDMuMDctOCw0LjdDOC42OSwxOC4xMywzLDI2LjYyLDMsMzUuNywzLDUwLjg5LDE4LjcsNjMuMjUsMzgsNjMuMjVTNzMsNTAuODksNzMsMzUuN0M3MywyNi42Miw2Ny4zMSwxOC4xMyw1Ny43OCwxMyw1NCwxMSw1MS4wNSw5LjEyLDQ4LjY2LDcuNjRjLTEuMDktLjY3LTIuMDktMS4yOS0zLTEuODRDNDIuNjMsNCw0MC40MiwzLDM4LDNaIi8+PC9nPjxnIGlkPSJNb3V0aCI+PGcgaWQ9IkJhY2tncm91bmQtMiIgZGF0YS1uYW1lPSJCYWNrZ3JvdW5kIj48cGF0aCBkPSJNNDUuMDUsNDNhOC45Myw4LjkzLDAsMCwxLTIuOTIsNC43MSw2LjgxLDYuODEsMCwwLDEtNCwxLjg4QTYuODQsNi44NCwwLDAsMSwzNCw0Ny43MSw4LjkzLDguOTMsMCwwLDEsMzEuMTIsNDNhLjcyLjcyLDAsMCwxLC44LS44MUg0NC4yNkEuNzIuNzIsMCwwLDEsNDUuMDUsNDNaIiBzdHlsZT0iZmlsbDojYjcxNDIyIi8+PC9nPjxnIGlkPSJUb25ndWUiPjxwYXRoIGlkPSJCYWNrZ3JvdW5kLTMiIGRhdGEtbmFtZT0iQmFja2dyb3VuZCIgZD0iTTM0LDQ3Ljc5YTYuOTEsNi45MSwwLDAsMCw0LjEyLDEuOSw2LjkxLDYuOTEsMCwwLDAsNC4xMS0xLjksMTAuNjMsMTAuNjMsMCwwLDAsMS0xLjA3LDYuODMsNi44MywwLDAsMC00LjktMi4zMSw2LjE1LDYuMTUsMCwwLDAtNSwyLjc4QzMzLjU2LDQ3LjQsMzMuNzYsNDcuNiwzNCw0Ny43OVoiIHN0eWxlPSJmaWxsOiNmZjYxNjQiLz48cGF0aCBpZD0iT3V0bGluZS0yIiBkYXRhLW5hbWU9Ik91dGxpbmUiIGQ9Ik0zNC4xNiw0N2E1LjM2LDUuMzYsMCwwLDEsNC4xOS0yLjA4LDYsNiwwLDAsMSw0LDEuNjljLjIzLS4yNS40NS0uNTEuNjYtLjc3YTcsNywwLDAsMC00LjcxLTEuOTMsNi4zNiw2LjM2LDAsMCwwLTQuODksMi4zNkE5LjUzLDkuNTMsMCwwLDAsMzQuMTYsNDdaIi8+PC9nPjxwYXRoIGlkPSJPdXRsaW5lLTMiIGRhdGEtbmFtZT0iT3V0bGluZSIgZD0iTTM4LjA5LDUwLjE5YTcuNDIsNy40MiwwLDAsMS00LjQ1LTIsOS41Miw5LjUyLDAsMCwxLTMuMTEtNS4wNSwxLjIsMS4yLDAsMCwxLC4yNi0xLDEuNDEsMS40MSwwLDAsMSwxLjEzLS41MUg0NC4yNmExLjQ0LDEuNDQsMCwwLDEsMS4xMy41MSwxLjE5LDEuMTksMCwwLDEsLjI1LDFoMGE5LjUyLDkuNTIsMCwwLDEtMy4xMSw1LjA1QTcuNDIsNy40MiwwLDAsMSwzOC4wOSw1MC4xOVptLTYuMTctNy40Yy0uMTYsMC0uMi4wNy0uMjEuMDlhOC4yOSw4LjI5LDAsMCwwLDIuNzMsNC4zN0E2LjIzLDYuMjMsMCwwLDAsMzguMDksNDlhNi4yOCw2LjI4LDAsMCwwLDMuNjUtMS43Myw4LjMsOC4zLDAsMCwwLDIuNzItNC4zNy4yMS4yMSwwLDAsMC0uMi0uMDlaIi8+PC9nPjxnIGlkPSJGYWNlIj48ZWxsaXBzZSBpZD0iUmlnaHRfQmx1c2giIGRhdGEtbmFtZT0iUmlnaHQgQmx1c2giIGN4PSI1My4yMiIgY3k9IjQwLjE4IiByeD0iNS44NSIgcnk9IjMuNDQiIHN0eWxlPSJmaWxsOiNmZWJiZDAiLz48ZWxsaXBzZSBpZD0iTGVmdF9CbHVjaCIgZGF0YS1uYW1lPSJMZWZ0IEJsdWNoIiBjeD0iMjIuOTUiIGN5PSI0MC4xOCIgcng9IjUuODUiIHJ5PSIzLjQ0IiBzdHlsZT0iZmlsbDojZmViYmQwIi8+PHBhdGggaWQ9IkV5ZXMiIGQ9Ik0yNS43LDM4LjhhNS41MSw1LjUxLDAsMSwwLTUuNS01LjUxQTUuNTEsNS41MSwwLDAsMCwyNS43LDM4LjhabTI0Ljc3LDBBNS41MSw1LjUxLDAsMSwwLDQ1LDMzLjI5LDUuNSw1LjUsMCwwLDAsNTAuNDcsMzguOFoiIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZCIvPjxwYXRoIGlkPSJJcmlzIiBkPSJNMjQsMzMuNjRhMi4wNywyLjA3LDAsMSwwLTIuMDYtMi4wN0EyLjA3LDIuMDcsMCwwLDAsMjQsMzMuNjRabTI0Ljc3LDBhMi4wNywyLjA3LDAsMSwwLTIuMDYtMi4wN0EyLjA3LDIuMDcsMCwwLDAsNDguNzUsMzMuNjRaIiBzdHlsZT0iZmlsbDojZmZmO2ZpbGwtcnVsZTpldmVub2RkIi8+PC9nPjwvc3ZnPg=="
                         />
                     </div>
                     <label
                         for="frontend-stack"
-                        class="absolute top-full left-0 text-center w-full text-xs text-muted-foreground wrap-break-word"
+                        class="absolute top-full py-1 left-0 text-center w-full text-xs text-muted-foreground wrap-break-word"
                         >Backend services</label
                     >
                 </div>
@@ -125,69 +130,87 @@ import "../styles/global.css";
         <Card className="max-w-2xl w-full p-2 py-3 mt-2">
             <div class="text-pretty">
                 I use <a
-                    href=""
+                    href="https://nextjs.org/"
                     class="dark:text-primary text-destructive font-bold"
                     >Nextjs</a
                 >, <a
-                    href=""
+                    href="https://tailwindcss.com/"
                     class="dark:text-primary text-destructive font-bold"
                     >Tailwindcss</a
                 >, <a
-                    href=""
+                    href="https://ui.shadcn.com/"
                     class="dark:text-primary text-destructive font-bold"
                     >Shadcn UI</a
                 > for building full stack web apps. <a
-                    href=""
+                    href="https://www.prisma.io/"
                     class="dark:text-primary text-destructive font-bold"
                     >Prisma</a
                 > ORM for managing databases. I used Python(<a
-                    href=""
+                    href="https://fastapi.tiangolo.com/"
                     class="dark:text-primary text-destructive font-bold"
                     >FastAPI</a
                 >) and <a
-                    href=""
+                    href="https://bun.sh/"
                     class="dark:text-primary text-destructive font-bold"
                     >BunJS</a
                 > to build backend services in the past. I also have experience with
-                running local llm/AI models and llm api such as OpenAI or Gemini.
+                running local llm/AI models (<a
+                    href="https://huggingface.co/docs/hub/gguf"
+                    class="font-bold dark:text-primary text-destructive">GGUF</a
+                >) and llm api such as OpenAI or Gemini.
                 <br />
                 <br />
             </div>
         </Card>
         <Card className="max-w-2xl w-full p-2 py-3">
             <div
-                class="text-pretty underline underline-offset-2 font-bold text-primary"
+                class="text-pretty underline underline-offset-3 font-bold text-primary text-lg"
             >
                 Some of my favorite projects are:
             </div>
             <div class="text-pretty">
-                <a href="" class="font-bold">Lunarscribe</a> a note taking desktop
-                software inspired by Obsidian. But unlike obsidian, it is built with
-                Tauri to reduce bundle/binary size and it has a very minimal UI.
-                Currently in beta.
+                <a
+                    href="https://github.com/Doctorthe113/lunarscribe-public"
+                    class="font-bold underline underline-offset-3"
+                    target="_blank">Lunarscribe</a
+                > is a note taking desktop software inspired by Obsidian. But unlike
+                obsidian, it is built with Tauri to reduce bundle/binary size and
+                it has a very minimal UI. Currently in beta.
             </div>
             <div class="text-pretty">
-                <a href="" class="font-bold">Cosmic(formerly Nocturne)</a> a AI chatapp
-                made for the t3 clonathon competition. This was my 2nd nextjs project.
-                I had a lot of fun and I learnt a lot!
+                <a
+                    href="https://cosmic.doctorthe113.com"
+                    class="font-bold underline underline-offset-3"
+                    target="_blank">Cosmic(formerly Nocturne)</a
+                > a AI chatapp made for the t3 clonathon competition. This was my
+                2nd nextjs project. I had a lot of fun and I learnt a lot! I am currently
+                working on a react native, local first version of it.
             </div>
             <div class="text-pretty">
-                <a href="" class="font-bold">FlexEmbed</a> simple tool to make large
-                file sharing on Discord much easier. This directly embeds the file
-                without any hassle. This isn't meant to be a full fledged file sharing
-                service. Just a humble tool to make my life easier.
+                <a
+                    href="https://flexembed.doctorthe113.com"
+                    class="font-bold underline underline-offset-3"
+                    target="_blank">FlexEmbed</a
+                > simple tool to make large file sharing on Discord much easier.
+                This directly embeds the file without any hassle. This isn't meant
+                to be a full fledged file sharing service. Just a humble tool to
+                make my life easier.
             </div>
             <div class="text-pretty">
-                <a href="" class="font-bold">Inkflow</a> inspired by Typelit, this
-                is a webapp where you can upload your favorite books and practice
-                typing. This was one of my very first react projects. So it's not
-                very polished. I intend to come back to this later sometime.
+                <a
+                    href="https://doctorthe113.github.io/inkflow/"
+                    class="font-bold underline underline-offset-3"
+                    target="_blank">Inkflow</a
+                > inspired by Typelit, this is a webapp where you can upload your
+                favorite books and practice typing. This was one of my very first
+                react projects. So it's not very polished. I intend to come back
+                to this later sometime.
             </div>
         </Card>
         <div class="mt-auto mb-10 dark:text-primary text-foreground">
-            This site was built with <AstroLogo className="h-6 inline" /> and <Shadcn
-                className="h-6 inline"
-            />
+            This site was built with <AstroLogo
+                className="h-6 inline dark:fill-white fill-black"
+            /> and <Shadcn className="h-6 inline" />
         </div>
     </div>
 </BaseLayout>
