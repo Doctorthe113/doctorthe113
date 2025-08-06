@@ -12,9 +12,9 @@ export function PortfolioCarousel({
     imagesPathArray: string[];
 }) {
     return (
-        <Carousel className="flex items-center gap-2">
-            <CarouselPrevious className="bg-sidebar" variant={"default"} />
-            <CarouselContent className="">
+        <Carousel className="flex items-center gap-2 relative w-9/12">
+            <CarouselPrevious className="bg-secondary" variant={"default"} />
+            <CarouselContent className="mx-1">
                 {imagesPathArray.map((path, index) => (
                     <CarouselItem
                         key={index}
@@ -23,12 +23,12 @@ export function PortfolioCarousel({
                         <img
                             src={path}
                             alt=""
-                            className="h-64 object-contain border-2 border-border shadow-shadow rounded"
+                            className="w-60 object-contain border-2 border-border shadow-shadow rounded"
                         />
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <CarouselNext className="bg-sidebar" variant={"default"} />
+            <CarouselNext className="bg-secondary" variant={"default"} />
         </Carousel>
     );
 }

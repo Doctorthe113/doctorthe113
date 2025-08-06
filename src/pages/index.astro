@@ -3,7 +3,7 @@
 import { DarkModeToggle } from "../components/darkmodeToggle";
 import { Button } from "../components/ui/button";
 import { Github } from "lucide-react";
-import { Card } from "../components/ui/card";
+import { Card, CardHeader } from "../components/ui/card";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Tailwind } from "@/icons/tailwind";
 import { NextJS } from "@/icons/nextjs";
@@ -15,7 +15,11 @@ import { EyeFollowingCat } from "@/components/eyeFollowingCat";
 import "../styles/global.css";
 import { PortfolioCarousel } from "@/components/portfolioCarousel";
 
-const imagesPathArray = ["/assets/output.webp", "/assets/screenshot.webp"];
+const imagesPathArray = [
+    "/assets/my-emblem.webp",
+    "/assets/output.webp",
+    "/assets/screenshot.webp",
+];
 ---
 
 <BaseLayout title="Home">
@@ -34,7 +38,10 @@ const imagesPathArray = ["/assets/output.webp", "/assets/screenshot.webp"];
                 <DarkModeToggle client:idle />
             </div>
         </div>
-        <div class="flex gap-2 items-center max-w-3xl">
+        <div
+            class="flex gap-2 items-center justify-evenly max-w-3xl md:flex-row flex-col px-2"
+            id="hero"
+        >
             <Card
                 className="max-w-2/5 p-2 py-3 h-full relative bg-transparent shadow-none  shadow-transparent border-none"
                 id="introduction"
@@ -51,28 +58,17 @@ const imagesPathArray = ["/assets/output.webp", "/assets/screenshot.webp"];
                     <br />
                     <br />
                     <div class="text-sm">
-                        I do programming in my free time. I am currently working
-                        building an open source, agentic, locally run AI mobile
-                        app using <a
-                            href="https://reactnative.dev/"
-                            class="dark:text-primary text-destructive font-bold"
-                            >React Native</a
-                        > and improving
-                        <a
-                            href="https://github.com/Doctorthe113/lunarscribe-public"
-                            class="dark:text-primary text-destructive font-bold"
-                            >Lunarscribe</a
-                        >. I am learning embedded C for raspberry pi pico,
-                        learning GO and Rust for backend. I am also learning
-                        more and more about NextJS and react everyday to build
-                        better web apps 🚀
+                        I do programming in my free time. I am learning embedded
+                        C, and GO and Rust for backend. I am also learning more
+                        and more about NextJS and react everyday to build better
+                        web apps 🚀
                     </div>
                     <br />
                     <br />
                 </div>
             </Card>
             <Card
-                className="max-w-3/5 h-full p-2 relative mt-24 flex-row w-max flex-wrap"
+                className="max-w-1/2 h-full p-2 relative mt-24 flex-row justify-center"
                 id="demo-images"
             >
                 <EyeFollowingCat
@@ -85,10 +81,10 @@ const imagesPathArray = ["/assets/output.webp", "/assets/screenshot.webp"];
                 />
             </Card>
         </div>
-        <div class="max-w-2xl w-full flex flex-col justify-center gap-3">
+        <div class="max-w-2xl w-full flex flex-col justify-center gap-3 my-2">
             <span
                 class="text-xl text-center underline underline-offset-3 font-bold cursor-default"
-                >The Stack that I use</span
+                >My tech stack</span
             >
             <div class="flex gap-6 items-center justify-center flex-wrap -z-10">
                 <div
@@ -154,47 +150,60 @@ const imagesPathArray = ["/assets/output.webp", "/assets/screenshot.webp"];
                 </div>
             </div>
         </div>
-        <Card className="max-w-2xl w-full p-2 py-3 mt-2">
+        <!-- <Card className="max-w-2xl w-full p-2 py-3 mt-2">
             <div class="text-pretty">
                 I use <a
                     href="https://nextjs.org/"
-                    class="dark:text-primary text-destructive font-bold"
-                    >Nextjs</a
+                    class="dark:text-accent text-primary">Nextjs</a
                 >, <a
                     href="https://tailwindcss.com/"
-                    class="dark:text-primary text-destructive font-bold"
-                    >Tailwindcss</a
+                    class="dark:text-accent text-primary">Tailwindcss</a
                 >, <a
                     href="https://ui.shadcn.com/"
-                    class="dark:text-primary text-destructive font-bold"
-                    >Shadcn UI</a
+                    class="dark:text-accent text-primary">Shadcn UI</a
                 > for building full stack web apps. <a
                     href="https://www.prisma.io/"
-                    class="dark:text-primary text-destructive font-bold"
-                    >Prisma</a
+                    class="dark:text-accent text-primary">Prisma</a
                 > ORM for managing databases. I used Python(<a
                     href="https://fastapi.tiangolo.com/"
-                    class="dark:text-primary text-destructive font-bold"
-                    >FastAPI</a
+                    class="dark:text-accent text-primary">FastAPI</a
                 >) and <a
                     href="https://bun.sh/"
-                    class="dark:text-primary text-destructive font-bold"
-                    >BunJS</a
+                    class="dark:text-accent text-primary">BunJS</a
                 > to build backend services in the past. I also have experience with
                 running local llm/AI models (<a
                     href="https://huggingface.co/docs/hub/gguf"
-                    class="font-bold dark:text-primary text-destructive">GGUF</a
+                    class="dark:text-accent text-destructive">GGUF</a
                 >) and llm api such as OpenAI or Gemini.
                 <br />
                 <br />
             </div>
+        </Card> -->
+        <Card className="max-w-2xl w-full p-3" id="what-i-am-working-on">
+            <CardHeader
+                className="font-bold text-lg text-primary underline underline-offset-3 p-0"
+                >What I am working on</CardHeader
+            >
+            <div class="text-pretty">
+                I am currently building an open source, agentic, locally run AI
+                mobile app using <a
+                    href="https://reactnative.dev/"
+                    class="dark:text-accent text-primary underline underline-offset-3"
+                    >React Native</a
+                > and improving
+                <a
+                    href="https://github.com/Doctorthe113/lunarscribe-public"
+                    class="dark:text-accent text-primary underline underline-offset-3"
+                    >Lunarscribe</a
+                >
+            </div>
         </Card>
-        <Card className="max-w-2xl w-full p-2 py-3">
-            <div
-                class="text-pretty underline underline-offset-3 font-bold text-primary text-lg"
+        <Card className="max-w-2xl w-full p-3" id="project-summary">
+            <CardHeader
+                className="font-bold text-lg text-primary underline underline-offset-3 p-0"
             >
                 Some of my favorite projects are:
-            </div>
+            </CardHeader>
             <div class="text-pretty">
                 <a
                     href="https://github.com/Doctorthe113/lunarscribe-public"
@@ -209,9 +218,9 @@ const imagesPathArray = ["/assets/output.webp", "/assets/screenshot.webp"];
                     href="https://cosmic.doctorthe113.com"
                     class="font-bold underline underline-offset-3"
                     target="_blank">Cosmic(formerly Nocturne)</a
-                > a AI chatapp made for the t3 clonathon competition. This was my
-                2nd nextjs project. I had a lot of fun and I learnt a lot! I am currently
-                working on a react native, local first version of it.
+                > is an AI chatapp made for the t3 clonathon competition. This was
+                my 2nd nextjs project. I had a lot of fun and I learnt a lot! I am
+                currently working on a react native, local first version of it.
             </div>
             <div class="text-pretty">
                 <a
@@ -234,7 +243,10 @@ const imagesPathArray = ["/assets/output.webp", "/assets/screenshot.webp"];
                 to this later sometime.
             </div>
         </Card>
-        <div class="mt-auto mb-10 dark:text-primary text-foreground">
+        <div
+            class="mt-auto mb-10 dark:text-primary text-foreground"
+            id="footer"
+        >
             This site was built with <AstroLogo
                 className="h-6 inline dark:fill-white fill-black"
             /> and <Shadcn className="h-6 inline" />
