@@ -299,7 +299,9 @@ export function EyeFollowingCat({ className }: { className?: string }) {
 
                 eyeInfo.element.setAttribute(
                     "transform",
-                    `${eyeInfo.originalTransform} rotate(${angle}, ${eyeInfo.cx}, ${eyeInfo.cy})`
+                    `${eyeInfo.originalTransform} rotate(${angle - 45}, ${
+                        eyeInfo.cx
+                    }, ${eyeInfo.cy})`
                 );
             }
         };
