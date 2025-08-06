@@ -11,53 +11,80 @@ import { React } from "@/icons/react";
 import { Shadcn } from "@/icons/shadcn";
 import { AstroLogo } from "@/icons/astro";
 import { Python } from "@/icons/python";
+import { EyeFollowingCat } from "@/components/eyeFollowingCat";
 import "../styles/global.css";
+import { PortfolioCarousel } from "@/components/portfolioCarousel";
+
+const imagesPathArray = ["/assets/output.webp", "/assets/screenshot.webp"];
 ---
 
 <BaseLayout title="Home">
     <div
-        class="flex flex-col justify-start items-center h-full w-full p-2 gap-5 relative z-100"
+        class="flex flex-col justify-start items-center h-full w-full p-2 gap-5 relative"
+        id="root"
     >
         <div
-            class="max-w-2xl w-full flex justify-between px-2 py-2 dark:bg-secondary bg-sidebar rounded-base border-2 border-border shadow-shadow gap-2 sticky top-2"
+            class="max-w-2xl w-full flex justify-between px-2 py-2 dark:bg-secondary bg-sidebar rounded-base border-2 border-border shadow-shadow gap-2 sticky top-2 z-100 items-center"
             id="header"
         >
-            <Button
-                className="h-8 hover:underline underline-offset-3"
-                variant={"noShadow"}>Blog</Button
-            >
-            <Button
-                className="h-8 hover:underline underline-offset-3"
-                variant={"noShadow"}>Projects</Button
-            >
+            <a class="hover:underline underline-offset-3 mx-1">Blog</a>
+            <a class="hover:underline underline-offset-3 mx-1">Projects</a>
             <div class="flex gap-2 ml-auto text-primary">
                 <Button client:idle className="size-8"> <Github /> </Button>
                 <DarkModeToggle client:idle />
             </div>
         </div>
-        <Card className="max-w-2xl w-full p-2 py-3" id="content">
-            <div class="text-pretty">
-                Hello there, welcome to my site. I am an indie fullstack
-                developer.
-                <br />
-                <br />
-                I do programming in my free time. I am currently working building
-                an open source, agentic, locally run AI mobile app using <a
-                    href="https://reactnative.dev/"
-                    class="dark:text-primary text-destructive font-bold"
-                    >React Native</a
-                > and improving
-                <a
-                    href="https://github.com/Doctorthe113/lunarscribe-public"
-                    class="dark:text-primary text-destructive font-bold"
-                    >Lunarscribe</a
-                >. I am learning embedded C for raspberry pi pico, learning GO
-                and Rust for backend. I am also learning more and more about
-                NextJS and react everyday to build better web apps 🚀
-                <br />
-                <br />
-            </div>
-        </Card>
+        <div class="flex gap-2 items-center max-w-3xl">
+            <Card
+                className="max-w-2/5 p-2 py-3 h-full relative bg-transparent shadow-none  shadow-transparent border-none"
+                id="introduction"
+            >
+                <div class="text-pretty text-center">
+                    <span
+                        class="text-xl font-black font-sans text-accent-foreground bg-gradient-to-b from-transparent from-20% to-accent to-20%"
+                        >Hello there,</span
+                    >
+                    <span class="text-xl font-sans"
+                        >I am an indie fullstack developer.</span
+                    >
+
+                    <br />
+                    <br />
+                    <div class="text-sm">
+                        I do programming in my free time. I am currently working
+                        building an open source, agentic, locally run AI mobile
+                        app using <a
+                            href="https://reactnative.dev/"
+                            class="dark:text-primary text-destructive font-bold"
+                            >React Native</a
+                        > and improving
+                        <a
+                            href="https://github.com/Doctorthe113/lunarscribe-public"
+                            class="dark:text-primary text-destructive font-bold"
+                            >Lunarscribe</a
+                        >. I am learning embedded C for raspberry pi pico,
+                        learning GO and Rust for backend. I am also learning
+                        more and more about NextJS and react everyday to build
+                        better web apps 🚀
+                    </div>
+                    <br />
+                    <br />
+                </div>
+            </Card>
+            <Card
+                className="max-w-3/5 h-full p-2 relative mt-24 flex-row w-max flex-wrap"
+                id="demo-images"
+            >
+                <EyeFollowingCat
+                    className="w-48 bottom-[calc(100%-0.5rem)]"
+                    client:idle
+                />
+                <PortfolioCarousel
+                    imagesPathArray={imagesPathArray}
+                    client:idle
+                />
+            </Card>
+        </div>
         <div class="max-w-2xl w-full flex flex-col justify-center gap-3">
             <span
                 class="text-xl text-center underline underline-offset-3 font-bold cursor-default"
