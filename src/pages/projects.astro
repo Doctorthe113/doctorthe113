@@ -1,0 +1,156 @@
+---
+import { Card, CardHeader } from "@/components/ui/card";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Link } from "lucide-react";
+---
+
+<BaseLayout title="Projects">
+    <script is:inline src="/finisherHeader.js" type="text/javascript">
+        new FinisherHeader({
+            count: 100,
+            size: {
+                min: 2,
+                max: 8,
+                pulse: 0,
+            },
+            speed: {
+                x: {
+                    min: 0,
+                    max: 0.4,
+                },
+                y: {
+                    min: 0,
+                    max: 0.6,
+                },
+            },
+            colors: {
+                background: "#201e30",
+                particles: ["#fbfcca", "#d7f3fe", "#ffd0a7"],
+            },
+            blending: "overlay",
+            opacity: {
+                center: 1,
+                edge: 0,
+            },
+            skew: -2,
+            shapes: ["c"],
+        });
+    </script>
+    <div
+        class="flex flex-col justify-start items-center h-full w-full p-2 gap-5 py-4"
+        id="projects"
+    >
+        <Card
+            className="max-w-2xl w-full p-3 bg-transparent shadow-none shadow-transparent border-none"
+        >
+            <CardHeader
+                className="font-bold text-lg text-primary underline underline-offset-3 p-0 text-center"
+                >Here are some of my projects, in details</CardHeader
+            >
+        </Card>
+        <Card className="max-w-2xl w-full p-3 gap-4 flex flex-row items-start">
+            <img
+                src="/lunarscribe.webp"
+                width="128"
+                height="128"
+                alt=""
+                class="object-cover size-24 border-2 border-border shadow-shadow rounded-md"
+            />
+            <div class="text-pretty">
+                <a
+                    href="https://github.com/Doctorthe113/lunarscribe-public"
+                    target="_blank"
+                    class="text-lg font-bold flex gap-2 items-center underline underline-offset-3"
+                    >Lunarscribe <Link className="size-4" /></a
+                >
+                <div class="text-sm">
+                    Lunarscribe is a minimal note taking app inspired by
+                    Obsidian. This takes notes using markdown which can be later
+                    easily accessed. It supports tables, Latex, Excalidraw, and
+                    more.
+                </div>
+            </div>
+        </Card>
+        <Card className="max-w-2xl w-full p-3 gap-4 flex flex-row items-start">
+            <img
+                src="/campfire.webp"
+                width="128"
+                height="128"
+                alt=""
+                class="object-cover size-24 border-2 border-border shadow-shadow rounded-md"
+            />
+            <div class="text-pretty">
+                <a
+                    href="https://campfire.doctorthe113.com"
+                    target="_blank"
+                    class="text-lg font-bold flex gap-2 items-center underline underline-offset-3"
+                    >Campfire <Link className="size-4" /></a
+                >
+                <div class="text-sm">
+                    A chatapp built entirely from scratch using std library.
+                    This is NOT A PRODUCTION app, rather a proof of concept.
+                    This taught me sql, websockets, sse, image processing, auth,
+                    and more!
+                </div>
+            </div>
+        </Card>
+        <Card className="max-w-2xl w-full p-3 gap-4 flex flex-row items-start">
+            <img
+                src="/cosmic.webp"
+                width="128"
+                height="128"
+                alt=""
+                class="object-cover size-24 border-2 border-border shadow-shadow rounded-md"
+            />
+            <div class="text-pretty">
+                <a
+                    href="https://cosmic.doctorthe113.com"
+                    target="_blank"
+                    class="text-lg font-bold flex gap-2 items-center underline underline-offset-3"
+                    >Cosmic <Link className="size-4" /></a
+                >
+                <div class="text-sm">
+                    An AI chatapp built for the t3 clonathon competition. It is
+                    easy to theme and customize. You can copy paste themes from
+                    tweakcn. It is now deprecated in the favor of Cosmic RN
+                </div>
+            </div>
+        </Card>
+        <Card className="max-w-2xl w-full p-3 gap-4 flex flex-row items-start">
+            <img
+                src="/flexembed.webp"
+                width="128"
+                height="128"
+                alt=""
+                class="object-cover size-24 border-2 border-border shadow-shadow rounded-md"
+            />
+            <div class="text-pretty">
+                <a
+                    href="https://flexembed.doctorthe113.com"
+                    target="_blank"
+                    class="text-lg font-bold flex gap-2 items-center underline underline-offset-3"
+                    >FlexEmbed <Link className="size-4" /></a
+                >
+                <div class="text-sm">
+                    Simple tool to make embedding files easier on platforms like
+                    Discord
+                </div>
+            </div>
+        </Card>
+        <Card
+            className="max-w-2xl w-full h-full p-3 gap-4 flex items-center finisher-header"
+        >
+            <CardHeader
+                className="w-full text-center font-bold text-lg text-primary underline underline-offset-3 p-0"
+                >Sneak peek to what I am working on 👀</CardHeader
+            >
+            <img
+                src="/cosmic-rn.webp"
+                width="256"
+                height="518"
+                alt=""
+                class="object-cover w-64 border-2 border-border shadow-shadow rounded-md"
+            />
+        </Card>
+    </div>
+</BaseLayout>
