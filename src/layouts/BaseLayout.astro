@@ -1,6 +1,9 @@
 ---
 import "../styles/global.css";
 const { title = "Doctorthe113", description = "Doctor's Blog'" } = Astro.props;
+import { DarkModeToggle } from "../components/darkmodeToggle";
+import { Button } from "../components/ui/button";
+import { Github } from "lucide-react";
 ---
 
 <html lang="en">
@@ -40,7 +43,34 @@ const { title = "Doctorthe113", description = "Doctor's Blog'" } = Astro.props;
             }
         </script>
     </head>
-    <body class="bg-background font-mono">
+    <body
+        class="bg-background font-mono flex flex-col justify-center items-center"
+    >
+        <div
+            class="max-w-2xl w-full flex justify-between px-2 py-2 dark:bg-secondary bg-sidebar rounded-base border-2 border-border shadow-shadow gap-2 sticky top-2 z-100 items-center"
+            id="header"
+        >
+            <a
+                class="hover:underline underline-offset-3 mx-1 font-bold cursor-pointer"
+                href="/">Home</a
+            >
+            <a
+                class="hover:underline underline-offset-3 mx-1 font-bold cursor-pointer"
+                >Blog</a
+            >
+            <a
+                class="hover:underline underline-offset-3 mx-1 font-bold cursor-pointer"
+                >Projects</a
+            >
+            <a
+                class="hover:underline underline-offset-3 mx-1 font-bold cursor-pointer"
+                href="/graphics">Graphics</a
+            >
+            <div class="flex gap-2 ml-auto text-primary">
+                <Button client:idle className="size-8"> <Github /> </Button>
+                <DarkModeToggle client:idle />
+            </div>
+        </div>
         <slot />
     </body>
 </html>

@@ -1,8 +1,5 @@
 ---
 //@ts-ignore
-import { DarkModeToggle } from "../components/darkmodeToggle";
-import { Button } from "../components/ui/button";
-import { Github } from "lucide-react";
 import { Card, CardHeader } from "@/components/ui/card";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Tailwind } from "@/icons/tailwind";
@@ -16,11 +13,7 @@ import { Python } from "@/icons/python";
 import { EyeFollowingCat } from "@/components/eyeFollowingCat";
 import { PortfolioCarousel } from "@/components/portfolioCarousel";
 
-const imagesPathArray = [
-    "/assets/my-emblem.webp",
-    "/assets/output.webp",
-    "/assets/screenshot.webp",
-];
+const imagesPathArray = ["/my-emblem.webp", "/output.webp", "/screenshot.webp"];
 ---
 
 <BaseLayout title="Home">
@@ -28,27 +21,6 @@ const imagesPathArray = [
         class="flex flex-col justify-start items-center h-full w-full p-2 gap-5 relative"
         id="root"
     >
-        <div
-            class="max-w-2xl w-full flex justify-between px-2 py-2 dark:bg-secondary bg-sidebar rounded-base border-2 border-border shadow-shadow gap-2 sticky top-2 z-100 items-center"
-            id="header"
-        >
-            <a
-                class="hover:underline underline-offset-3 mx-1 font-bold cursor-pointer"
-                >Blog</a
-            >
-            <a
-                class="hover:underline underline-offset-3 mx-1 font-bold cursor-pointer"
-                >Projects</a
-            >
-            <a
-                class="hover:underline underline-offset-3 mx-1 font-bold cursor-pointer"
-                >Graphics</a
-            >
-            <div class="flex gap-2 ml-auto text-primary">
-                <Button client:idle className="size-8"> <Github /> </Button>
-                <DarkModeToggle client:idle />
-            </div>
-        </div>
         <div
             class="flex gap-2 items-center justify-evenly max-w-3xl md:flex-row flex-col px-2"
             id="hero"
@@ -280,7 +252,7 @@ const imagesPathArray = [
         >
             This site was built with <AstroLogo
                 className="h-6 inline dark:fill-white fill-black"
-            /> and <Shadcn className="h-6 inline" />
+            /> and <Shadcn className="h-6 inline stroke-foreground" />
         </div>
     </div>
 </BaseLayout>
