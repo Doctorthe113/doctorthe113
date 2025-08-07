@@ -148,9 +148,14 @@
 }
 
 @layer base {
+    * {
+        @apply select-text;
+    }
+
     body {
         @apply text-foreground font-base bg-background;
     }
+
     h1,
     h2,
     h3,
@@ -162,5 +167,9 @@
 
     ::selection {
         @apply text-primary-foreground bg-primary;
+    }
+
+    #finisher-canvas {
+        background-color: transparent !important;
     }
 }
