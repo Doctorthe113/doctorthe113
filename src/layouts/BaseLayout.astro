@@ -2,7 +2,7 @@
 import "../styles/global.css";
 const {
     title = "Doctorthe113",
-    description = "An indie fullstack developer's portfolio and blog.",
+    description = "I am an indie fullstack developer. I do programming in my free time. I am learning embedded C, and GO and Rust for backend. I am also learning more and more about NextJS and react everyday to ship better web apps 🚀",
 } = Astro.props;
 import { DarkModeToggle } from "../components/darkmodeToggle";
 import { Button } from "../components/ui/button";
@@ -33,7 +33,7 @@ import { Github } from "lucide-react";
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="" />
-        <meta property="og:image" content="my-emblem.webp" />
+        <meta property="og:image" content="/my-emblem.webp" />
         <meta property="og:image:alt" content="Website preview image" />
         <meta property="og:site_name" content="doctorthe113.com" />
 
@@ -41,7 +41,7 @@ import { Github } from "lucide-react";
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title + " - doctorthe113.com"} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="my-emblem.webp" />
+        <meta name="twitter:image" content="/my-emblem.webp" />
         <meta name="twitter:image:alt" content="Website preview image" />
         <script is:inline>
             const getThemePreference = () => {
