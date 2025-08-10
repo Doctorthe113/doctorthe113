@@ -1,0 +1,27 @@
+---
+import { Card, CardHeader } from "@/components/ui/card";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title="Browse blogs" description="Blogs from Doctorthe113">
+    <div
+        class="flex justify-start items-start h-full w-full px-2 pt-10 gap-5 max-w-3xl text-pretty"
+    >
+        <Card className="min-w-[12rem] max-w-[14rem] px-2 py-1 gap-1">
+            <h1 class="w-full text-lg text-center p-0 m-0">
+                {frontmatter.title}
+            </h1>
+            <p class="text-sm text-wrap text-center">
+                @{frontmatter.author}
+            </p>
+            <p class="text-sm text-wrap text-center text-muted-foreground">
+                {frontmatter.date}
+            </p>
+            <p class="text-sm text-wrap text-muted-foreground">
+                {frontmatter.description}
+            </p>
+        </Card>
+        <slot />
+    </div>
+</BaseLayout>
