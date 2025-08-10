@@ -26,19 +26,19 @@ const imagesPathArray = [
         id="root"
     >
         <div
-            class="flex gap-2 items-center justify-evenly max-w-3xl md:flex-row flex-col px-2"
+            class="flex gap-6 items-center justify-evenly max-w-3xl md:flex-row flex-col px-2 mt-12 md:mt-24"
             id="hero"
         >
             <Card
-                className="max-w-2/5 p-2 py-3 h-full relative bg-transparent shadow-none  shadow-transparent border-none"
+                className="md:max-w-2/5 p-2 py-3 h-full relative bg-transparent shadow-none  shadow-transparent border-none"
                 id="introduction"
             >
                 <div class="text-pretty text-center">
                     <span
-                        class="text-xl font-black font-sans text-accent-foreground bg-gradient-to-b from-transparent from-20% to-accent to-20%"
+                        class="text-2xl font-black font-sans text-accent-foreground bg-gradient-to-b from-transparent from-20% to-accent to-20%"
                         >Hello there,</span
                     >
-                    <span class="text-xl font-sans"
+                    <span class="text-2xl font-sans font-bold"
                         >I am an indie fullstack developer.</span
                     >
                     <br />
@@ -54,7 +54,7 @@ const imagesPathArray = [
                 </div>
             </Card>
             <Card
-                className="max-w-1/2 h-full p-2 relative mt-24 flex-row justify-center"
+                className="max-w-2/3 md:max-w-1/2 h-full p-2 relative flex-row justify-center"
                 id="demo-images"
             >
                 <EyeFollowingCat
@@ -68,7 +68,7 @@ const imagesPathArray = [
             </Card>
         </div>
         <Card
-            className="max-w-2xl w-full p-3 bg-transparent shadow-none shadow-transparent border-none"
+            className="max-w-3xl w-full p-3 bg-transparent shadow-none shadow-transparent border-none"
             id="what-i-am-working-on"
         >
             <CardHeader
@@ -90,7 +90,7 @@ const imagesPathArray = [
             </div>
         </Card>
         <div
-            class="max-w-2xl w-full flex flex-col justify-center gap-3 my-4 mb-6"
+            class="max-w-3xl w-full flex flex-col justify-center gap-3 my-4 mb-6"
         >
             <span
                 class="text-xl text-primary text-center underline underline-offset-3 font-bold cursor-default"
@@ -205,7 +205,7 @@ const imagesPathArray = [
                 </div>
             </div>
         </div>
-        <Card className="max-w-2xl w-full p-3" id="project-summary">
+        <Card className="max-w-3xl w-full p-3 mt-6" id="project-summary">
             <CardHeader
                 className="font-bold text-lg text-primary underline underline-offset-3 p-0 text-center"
             >

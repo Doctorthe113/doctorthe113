@@ -185,7 +185,6 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
 function CarouselPrevious({
     className,
     variant = "noShadow",
-    size = "icon",
     ...props
 }: React.ComponentProps<typeof Button>) {
     const { orientation, scrollPrev, canScrollPrev } = useCarousel();
@@ -194,7 +193,6 @@ function CarouselPrevious({
         <Button
             data-slot="carousel-previous"
             variant={variant}
-            size={size}
             className={cn(
                 "size-10 absolute rounded-base bg-sidebar",
                 orientation === "horizontal"
@@ -215,7 +213,6 @@ function CarouselPrevious({
 function CarouselNext({
     className,
     variant = "noShadow",
-    size = "icon",
     ...props
 }: React.ComponentProps<typeof Button>) {
     const { orientation, scrollNext, canScrollNext } = useCarousel();
@@ -224,7 +221,6 @@ function CarouselNext({
         <Button
             data-slot="carousel-next"
             variant={variant}
-            size={size}
             className={cn(
                 "size-10 absolute rounded-base",
                 orientation === "horizontal"
