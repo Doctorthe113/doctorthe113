@@ -93,7 +93,15 @@ import { Github } from "lucide-react";
                 href="/graphics">Graphics</a
             >
             <div class="flex gap-2 ml-auto text-primary">
-                <Button client:idle className="size-8"> <Github /> </Button>
+                <Button client:idle className="w-9 h-8 p-0">
+                    <a
+                        href="https://github.com/Doctorthe113"
+                        class="h-full w-full flex justify-center items-center"
+                        target="_blank"
+                    >
+                        <Github className="" />
+                    </a>
+                </Button>
                 <DarkModeToggle client:idle />
             </div>
         </div>
