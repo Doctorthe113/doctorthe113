@@ -22,6 +22,15 @@
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 :root {
     --background: #e7e5d0;
     --foreground: #11111b;
@@ -171,5 +180,30 @@
 
     #finisher-canvas {
         background-color: transparent !important;
+    }
+
+    #background-image-container {
+        display: none;
+    }
+
+    .dark #background-image-container {
+        display: block !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        z-index: -1;
+        background-image: url("/witchHutBackground.webp");
+        background-size: cover;
+        background-position: center;
+        filter: blur(10px);
+        animation: fadeIn 2s ease-in-out forwards;
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 100%
+        );
+        mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
     }
 }
