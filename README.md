@@ -1,6 +1,5 @@
 ## Hi there 👋
 
-Working on a local agentic AI app for mobile!
 
 ### **Languages I know:**
 
@@ -16,15 +15,6 @@ Working on a local agentic AI app for mobile!
 ![VSCode](https://img.shields.io/badge/VSCode-aliceblue?style=for-the-badge&logo=vscodium&logoColor=blue)
 ![Linux](https://img.shields.io/badge/Linux-black?style=for-the-badge&logo=linux&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-blue?style=for-the-badge&logo=docker&logoColor=white)
-
-### **Completed projects:**
-
--   [Campfire](https://campfire.doctorthe113.com)
--   [wavScribe](https://wavscribe.doctorthe113.com)
--   [flexEmbed](https://flexembed.doctorthe113.com)
--   [Cosmic(formerly knowns as Nocturne) - deprecated](https://cosmic.doctorthe113.com)
-
-#### To reach out to me, message me on ![Discord - @doctorthe113](https://img.shields.io/badge/@doctorthe113-blue?style=flat-square&logo=discord&logoColor=white)
 
 <!--
 **Doctorthe113/doctorthe113** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
